@@ -26,6 +26,7 @@ and wait about 8 minutes before running Vital.cy.js (The vital login sends an OT
     npm run e2e -- --browser chrome
 - Run a single test in headless mode:
     npx cypress run --headless --spec "cypress/e2e/folderName/fileName.cy.js" --browser chrome
+    npx cypress run --headless --spec "cypress/e2e/authUser/RH_createAccount.cy.js" --browser chrome
 - Run several tests in headless mode:
     npx cypress run --headless --spec "cypress/e2e/folderName/file1.cy.js,cypress/e2e/folderName/file2.cy.js,cypress/e2e/folderName/file3.cy.js" --browser chrome
 
