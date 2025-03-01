@@ -1,0 +1,42 @@
+{
+    "OrderPlaced":{
+        "messageDescription": "You have placed an order for a home PFAS test",
+        "modalTitle": "PFAS test order",
+        "modalDescription": "You have placed an order for a home PFAS test #"
+    },
+    "OrderDispatched":{
+        "messageDescription": "Your PFAS test kit has been dispatched",
+        "modalTitle": "PFAS test order dispatched",
+        "modalDescription": "Your PFAS test kit has been dispatched, to track click"
+    },
+    "OrderAtDelCompany":{
+        "messageDescription": "Your PFAS test kit is at delivery company",
+        "modalTitle": "PFAS test order at delivery company",
+        "modalDescription": "Your PFAS test kit is at delivery company, to track click"
+    },
+    "OrderInTransit":{
+        "messageDescription": "Your PFAS core panel test kit is in transit #",
+        "modalTitle": "PFAS test order in transit",
+        "modalDescription": "Your PFAS core panel test kit is in transit. To keep track of your order, click"
+    },
+    "OrderDelivered":{
+        "messageDescription": "Your PFAS test kit delivered",
+        "modalTitle": "PFAS test order delivered",
+        "modalDescription": "Your PFAS test kit has been delivered."
+    },
+    "OrderInTransitToLab":{
+        "messageDescription": "Your PFAS test kit is in transit to lab",
+        "modalTitle": "PFAS test order in transit to LAB",
+        "modalDescription": "Your PFAS test kit is in transit to lab, to track click here"
+    },
+    "OrderUpdate":{
+        "messageDescription": "Your PFAS test kit is in the lab",
+        "modalTitle": "Order update",
+        "modalDescription": "Your PFAS test kit is in the lab"
+    },
+    "TestResults":{
+        "messageDescription": "Your PFAS test results are now available",
+        "modalTitle": "PFAS test result",
+        "modalDescription": "Your PFAS test results for the test kit with activation code"
+    }
+}

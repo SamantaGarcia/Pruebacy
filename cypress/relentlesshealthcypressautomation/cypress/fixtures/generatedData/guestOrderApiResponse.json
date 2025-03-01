@@ -1,0 +1,14 @@
+{
+  "status": "SUCCESS",
+  "status_code": 200,
+  "order_id": 1536,
+  "user_id": "e8410350-3051-70e8-9b3d-dea1c24d0aea",
+  "s_order_id": "gid://shopify/Order/6341162336568",
+  "s_order_name": "#2330",
+  "test_kit_details": [
+    {
+      "vital_order_id": "4b9ba8b6-acf0-4bd6-9022-0896ddee1ec0",
+      "vital_user_id": "01db603b-550b-4a42-81fb-62779bc30314"
+    }
+  ]
+}

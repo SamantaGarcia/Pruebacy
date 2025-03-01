@@ -1,0 +1,26 @@
+{
+    "CancelCreation": {
+      "expectedResult": "At-home PFAS and toxin testing"
+    },
+    "EmptyFields": {
+        "expectedError1": "Required",
+        "expectedError2": "You must accept the terms of service",
+        "expectedError3": "Birth date is required",
+        "expectedError4": "Zipcode is required"
+      },
+    "InvalidFields":{
+        "invalidPhone": "1234567890",
+        "invalidAddress1": "invalid address",
+        "invalidCity": "invalir city",
+        "invalidZipCode": "12345",
+        "invalidVerificationCode": "12345",
+        "invalidBirthday": "12/21/2024",
+        "expectedErrorPhone": "Enter a valid US Phone number",
+        "expectedErrorAddress": "Invalid Address. Please provide the correct address",
+        "expectedErrorCode": "Invalid confirmation code. Please try again.",
+        "expectedErrorBirthday": "You must be at least 18 years old"
+    },
+    "ResendCode":{
+        "expectedResult": "Confirmation code resent successfully"
+    }
+  }

@@ -1,0 +1,29 @@
+{
+    "SendMessageLoggedUser":{
+        "subject": "Cypress test - Logged User",
+        "message": "This is a test from Cypress Automation",
+        "messageSentAlert": "Submitted your data"
+    },
+    "SendMessageGuest":{
+        "name": "Cypress QA",
+        "email": "cypress@test.com",
+        "subject": "Cypress test - Guest User",
+        "message": "This is a test from Cypress Automation",
+        "messageSentAlert": "Submitted your data"
+    },
+    "EmptyFields":{
+        "emptyFieldsAlert": "Please enter all fields"
+    },
+    "QuestionsSection":{
+        "orderQuestion": "My test kit hasn't arrived yet. When can I expect it?",
+        "orderExpectedResult": "Orders usually take 2-3 working days"
+    },
+    "pfasTestSection":{
+        "pfasTestQuestion": "How does Relentless Health monitor PFAS exposure?",
+        "pfasTestExpectedResult": "Our lab tests can identify the presence of PFAS within your body"
+    },
+    "pfasSection":{
+        "pfasQuestion": "What are PFAS chemicals?",
+        "pfasExpectedResult": "PFAS (per-and poly-fluoroalkyl substances) are a large family of man-made"
+    }
+}

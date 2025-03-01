@@ -1,0 +1,43 @@
+{
+    "Page1":{
+        "dashboard": "Welcome back"
+    },
+    "Page2":{
+        "back": "Buy home PFAS test",
+        "birthdate": "03/03/2003",
+        "emptyNameAlert": "Name is required",
+        "emptyPhoneAlert": "Phone number is required",
+        "emptyBirthdateAlert": "Date of birth is required",
+        "invalidName": "NoLastname",
+        "invalidNameAlert": "Please enter both first and last name",
+        "invalidBirthdate": "12/12/2020",
+        "invalidBirthdateAlert": "You must be at least 18 years old"
+    },
+    "Page3":{
+        "emptyEmailAlert": "Email is required",
+        "emptyAddress1Alert": "Address is required",
+        "emptyCityAlert": "City is required",
+        "emptyStateAlert": "State is required",
+        "emptyZipcodeAlert": "Zipcode is required",
+        "invalidEmail": "invalidemail@.com",
+        "invalidEmailAlert": "Invalid email address",
+        "invalidAddress1": "invalidAddress1",
+        "invalidAddress2": "invalidAddress2",
+        "invalidCity": "invalidCity",
+        "invalidState": "invalidState",
+        "invalidZipcode": "invalidZipcode",
+        "invalidZipcodeAlert": "Please use a 5-digit ZIP code",
+        "invalidAddressAlert": "Invalid Address. Please provide the correct address",
+        "h5Page2": "Who is this test for?"
+
+    },
+    "Checkout":{
+        "h5Page3": "Where should we send the test kit?",
+        "orderProduct": "DEV PFAS Core Panel (at-home PFAS test) x 1",
+        "orderPrice": "$299",
+        "orderBirthdate": "Mar 3, 2003"
+    },
+    "GuestPage1":{
+        "dashboard": "At-home PFAS and toxin testing"
+    }
+}
