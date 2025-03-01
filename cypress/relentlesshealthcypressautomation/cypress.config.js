@@ -8,6 +8,14 @@ module.exports = defineConfig({
   // experimentalMemoryManagement: true,
   // numTestsKeptInMemory: 1,
   reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: { //added for ci/cd
+    reportDir: 'cypress/reports',
+    overwrite: false,
+    html: true,
+    json: true,
+    charts: true,
+    reportFilename: 'report',
+  },
   env: {...process.env},
   e2e: {
     watchForFileChanges: false,
