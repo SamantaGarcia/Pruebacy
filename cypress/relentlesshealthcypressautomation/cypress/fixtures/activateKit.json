@@ -1,0 +1,27 @@
+{
+    "authActivateKit": {
+        "kitActivatedTitle": "Your activation was successfully completed",
+        "cancelActivation": "Welcome back"
+    },
+    "emptyfields":{
+        "expectedError1": "Activation code is required",
+        "expectedError2": "Email is required"
+    },
+    "invalidCode":{
+        "incode": "JUFRH343",
+        "expectedResult": "Invalid activation code"
+    },
+    "invalidEmail":{
+        "inemail": "qa@",
+        "expectedResult": "Invalid email"
+    },
+    "incorrectCode":{
+        "incCode": "123456789012"
+    },
+    "guestActivateKit": {
+        "kitActivatedTitle": "Your registration and activation were successfully completed"
+    },
+    "Donation":{
+        "firefighters": "Firefighter Cancer Initiative"
+    }
+}

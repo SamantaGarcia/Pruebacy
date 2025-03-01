@@ -1,0 +1,15 @@
+{
+    "emptyFields":{
+        "emptyName": "Name is required",
+        "emptyEmail": "Email is required"
+    },
+    "invalidEmail":{
+        "invalidEmail": "invalidEmail",
+        "invalidEmailResult": "Invalid email"
+    },
+    "incorrectAccount":{
+        "incorrectName": "incorrect Name",
+        "incorrectEmail": "qa@relentlesshealth.com",
+        "incorrectAccountResult": "404 - Page Not Found"
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "Results":{
+        "PFBA": "Inconclusive",
+        "PFPeA": "0",
+        "PFHXA": "Not Detected",
+        "PFOA": "0.05",
+        "PFUnDA": "60",
+        "restOfFields": "0.20"
+    },
+    "SummaryInfo":{
+        "titleSummary":"Your latest result",
+        "compoundsDetected": "12",
+        "nasemLevel": "NASEM level medium",
+        "totalPFAS": "2.4"
+    },
+    "nasemGuidanceLow":{
+        "lowLevelTitle": "NASEM guidance for low level score",
+        "lowLevelDescription": "No special requirements. Your physician should provide you with the usual standard of care.",
+        "suggestion1": "If you're still interested in lowering your PFAS levels, refer to our how to guide."
+    },
+    "nasemGuidanceMed":{
+        "medLevelTitle": "NASEM guidance for medium level score",
+        "medLevelDescription": "Reduce PFAS exposure, especially if pregnant.",
+        "suggestion1": "Prioritize screening for dyslipidemia with a lipid panel (every 4 to 6 years over age 20) as recommended by the",
+        "suggestion2": "Screen for hypertensive disorders of pregnancy at all prenatal visits per the",
+        "suggestion3": "Screen for breast cancer based on clinical practice guidelines based on age and other risk factors such as those recommended by the"
+    },
+    "nasemGuidanceHigh":{
+        "highLevelTitle": "NASEM guidance for high level score",
+        "highLevelDescription": "Identify sources of PFAS exposure and reduce if possible. This is especially important if you are pregnant.",
+        "suggestion1": "Prioritize screening for dyslipidemia with a lipid panel following",
+        "suggestion2": "Conduct thyroid function testing (for patients over age 18) with serum thyroid stimulating hormone (TSH)",
+        "suggestion3": "Assess for signs and symptoms of kidney cancer (if you are over 45), including with urinalysis",
+        "suggestion4": "Assess for signs and symptoms of testicular cancer and ulcerative colitis",
+        "suggestion5": "Screen for hypertensive disorders of pregnancy at all prenatal visits per the",
+        "suggestion6": "Screen for breast cancer based on clinical practice guidelines based on age and other risk factors such as those recommended by the"
+    },
+    "Comparison":{
+        "nasemScore": "Your NASEM Score is lower than 87% of the US general population.",
+        "exposure": "This means your exposure is below average."
+    },
+    "ReportInfo":{
+        "disclaimerText": "This test is intended to provide clinical information regarding the presence or absence of the specified PFAS compounds. Results should be interpreted in conjunction with other clinical and laboratory findings. The results of this test are not intended to be the sole basis for diagnosis or clinical decision-making. This test was developed and its performance characteristics determined by Relentless Health. It has not been cleared or approved by the US Food and Drug Administration.",
+        "licenseNumber": "#36095-DIR-4"
+    }
+    
+}

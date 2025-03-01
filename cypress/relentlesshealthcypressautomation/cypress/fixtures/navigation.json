@@ -1,0 +1,21 @@
+{
+    "Auth":{
+        "dashboard": "At-home PFAS and toxin testing",
+        "emptyResults": "There are no reports to display at the moment.",
+        "emptyOrders": "No orders available",
+        "support": "Support",
+        "profile": "Edit Profile",
+        "emptyInbox": "You don't have any messages yet.",
+        "privacyPolicy": "Privacy Policy",
+        "termsService": "Terms of Service",
+        "orderTest": "Buy home PFAS test",
+        "activateTest": "Activate test kit",
+        "infoEmail": "mailto:info@relentlesshealth.com"
+    },
+    "Guest":{
+        "home": "At-home PFAS and toxin testing",
+        "signIn": "Welcome back to Relentless Health!",
+        "createAccount": "Create Your Account"
+
+    }
+}

@@ -1,0 +1,8 @@
+.env
+node_modules
+Dockerfile
+docker-compose.yml
+.dockerignore
+/cypress/reports
+/cypress/screenshots
+/cypress/videos

@@ -1,0 +1,14 @@
+{
+  "EmptyFields": {
+    "expectedError1": "Email/username is required",
+    "expectedError2": "Password is required"
+  },
+  "IncorrectEmail": {
+    "wrongEmail": "wrongemail@gmail.com",
+    "expectedError": "User does not exist."
+  },
+  "IncorrectPassword": {
+    "wrongPsw": "123",
+    "expectedError": "Incorrect username or password."
+  }
+}

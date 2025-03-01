@@ -1,0 +1,44 @@
+{
+    "AccountCreation": {
+        "name": "Cypress",
+        "lastName": "Test",
+        "phone": "+14082145953",
+        "birthday": "03/03/2003",
+        "gender": "Female",
+        "address1": "2224 Auburn Blvd",
+        "address2": "ste 3",
+        "city": "Sacramento",
+        "state": "California",
+        "zipCode": "95821",
+        "education": "Education",
+        "expectedResult": "Registration was successfully completed"
+      },
+
+      "EditInformation":{
+        "newName": "QA",
+        "newLastName": "Magmalabs",
+        "newPhone": "+14082145953",
+        "newBirthday": "03/03/2003",
+        "age": "21 years",
+        "newGender": "Unknown",
+        "newAddress1": "5485 Reno Corporate Dr",
+        "newAddress2": "Ste 400",
+        "newCity": "Reno",
+        "newState": "Nevada",
+        "newZipCode": "89511",
+        "expectedResult": "Profile updated successfully"
+    },
+
+    "OrderTestData":{
+      "orderName": "QA Magmalabs",
+      "guestName": "QA Guest",
+      "guestLastname": "Guest",
+      "year": "2003",
+      "month": "March",
+      "orderBirthdate": "2003-03-03",
+      "timestamp": "1046671200000",
+      "orderInstructions": "instructions",
+      "orderCompleteAddress": "5485 Reno Corporate Dr, Reno, NV, 89511",
+      "orderState": "NV"
+  }
+}

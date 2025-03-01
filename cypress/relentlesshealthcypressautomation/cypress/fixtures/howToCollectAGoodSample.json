@@ -1,0 +1,43 @@
+{
+    "firstSection":{
+        "title": "How to collect a good sample",
+        "importantNote": "Please allow 10-30 minutes to collect your sample and make sure to mail it back on the same day",
+        "description": "Below you will find the latest instructions for use, along with step-by-step instructional videos."
+    },
+    "howToTakeYourTest":{
+        "title": "How to take your test",
+        "item1": "Check the contents of the kit against the list shown on the instructions.",
+        "item2": "Uncap one of the lancets by twisting the cap off.",
+        "item3": "Tear open the sample bag and take out the sampler cartridge. Open the sampler cartridge by clicking the tabs open. Please don't throw away the desiccant card.",
+        "item4": "Open the alcohol wipe, gauze, and adhesive bandages and place them next to the lancet and sampler ready to use later.",
+        "item5": "Wash your hands with soap and warm water. Dry them thoroughly.",
+        "item6": "Warm your hands by rubbing together for 30s. If you have poor circulation, you should also walk around a bit waving your hands in small circles at waist level."
+    },
+    "takingYourSample":{
+        "title": "Taking your sample",
+        "item1": "Choose which finger you want to prick. The best is the middle or ring finger of your non-dominant hand.",
+        "item2": "Clean the finger tip with the alcohol wipe.",
+        "item3": "Find the correct place to take the sample. This is to one side of the centerline of the fingertip on the fleshy pad.",
+        "item4": "Place the tip of the lancet on the finger tip and push in firmly. It will click, prick your finger, and retract the needle.",
+        "item5": "Wait for a few seconds for the first drop of blood to form. If needed, you can massage from the palm of your hand up towards the tip to improve blood flow.",
+        "item6": "Wipe away the first drop of blood using the sterile gauze.",
+        "item7": "Now hold your hand out flat. Take the sampler and touch the first sampler tip to the blood drop from above as shown. Wait until the tip is completely filled as shown and then wait for at least 2 more seconds before slowly removing the device.",
+        "item8": "Repeat step 7 for the other tips.",
+        "item9": "Place the sampler down carefully while you bandage your finger.",
+        "importantNote": "*If you have trouble collecting enough blood, or if the blood clots too fast, you can repeat the steps using a new lancet on one of your other fingers"
+    },
+    "returnYourSample":{
+        "title": "Return your sample",
+        "item1": "Close the sampler cartridge by lifting the flaps and squeezing together until you hear it click.",
+        "item2": "Write your details on the label provided:",
+        "item2a": "a. Your full name",
+        "item2b": "b. Date of Birth",
+        "item2c": "c. Phone number",
+        "item2d": "d. Date and time you finished collecting your sample",
+        "item3": "Place the sticker over the Neoteryx label on the front of the sampler cartridge. Please avoid covering the identification barcode on the back of the cartridge.",
+        "item4": "Place the cartridge back in the silver sample bag making sure the desiccant card is still inside.",
+        "item5": "Seal the sample bag and place it in the return mailer envelope. Seal the mailer envelope and stick the return label to the front.",
+        "item6": "Return the sample to our lab by dropping it at any USPS location or mailbox. You can also drop it at some other locations including some UPS or FedEx locations.",
+        "importantNote": "*Important! Please ship your sample back on the same day you collect it. Drop off your completed kit at your local USPS post office or post box before the last pickup to ensure it reaches our lab promptly. Our lab currently operates Monday-Friday. So kits sent on Friday or at the weekend will not be processed until the following week."
+    }
+}
