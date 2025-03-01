@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -26,24 +26,26 @@ jobs:
 
       - name: Set up environment variables
         run: echo "${{ secrets.ENV_FILE }}" > .env
+        working-directory: cypress/relentlesshealthcypressautomation
 
       - name: Run Cypress tests with Mochawesome reporter
         run: npx cypress run --browser chrome --reporter mochawesome
+        working-directory: cypress/relentlesshealthcypressautomation
 
       - name: Upload Cypress videos
         uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
-          path: cypress/videos
+          path: cypress/relentlesshealthcypressautomation/cypress/videos
 
       - name: Upload Cypress screenshots
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
-          path: cypress/screenshots
+          path: cypress/relentlesshealthcypressautomation/cypress/videos
 
       - name: Upload Mochawesome Reports
         uses: actions/upload-artifact@v4
         with:
           name: mochawesome-report
-          path: cypress/reports
+          path: cypress/relentlesshealthcypressautomation/cypress/videos
