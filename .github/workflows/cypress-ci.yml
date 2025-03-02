@@ -33,16 +33,16 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
-          path: cypress/videos
+          path: cypress/relentlesshealthcypressautomation/cypress/videos
 
       - name: Upload Cypress Screenshots
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
-          path: cypress/screenshots
+          path: cypress/relentlesshealthcypressautomation/cypress/screenshots
 
       - name: Upload Mochawesome Reports
         uses: actions/upload-artifact@v4
         with:
           name: mochawesome-report
-          path: cypress/reports
+          path: cypress/relentlesshealthcypressautomation/cypress/reports
