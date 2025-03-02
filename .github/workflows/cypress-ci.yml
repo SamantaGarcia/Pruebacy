@@ -29,13 +29,13 @@ jobs:
       - name: Run Cypress tests with Mochawesome reporter
         run: npx cypress run --browser chrome --reporter mochawesome
 
-      - name: Upload Cypress videos
+      - name: Upload Cypress Videos
         uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
           path: cypress/videos
 
-      - name: Upload Cypress screenshots
+      - name: Upload Cypress Screenshots
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
