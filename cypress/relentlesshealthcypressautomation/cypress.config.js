@@ -14,7 +14,7 @@ module.exports = defineConfig({
     html: true,
     json: true,
     charts: true,
-    reportFilename: 'report',
+    reportFilename: 'report'
   },
   env: {...process.env},
   e2e: {
