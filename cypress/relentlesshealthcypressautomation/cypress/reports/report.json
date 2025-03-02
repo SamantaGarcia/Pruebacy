@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-03-02T21:59:12.653Z",
+    "end": "2025-03-02T21:59:20.816Z",
+    "duration": 8163
+  },
+  "results": [
+    {
+      "uuid": "f94b0ab4-3b2c-4b42-b5bb-a5e233e0f065",
+      "title": "",
+      "fullFile": "cypress/e2e/authUser/RH_createAccount.cy.js",
+      "file": "cypress/e2e/authUser/RH_createAccount.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6f1d147b-f6a5-4777-b6d9-a3cdda2e9bec",
+          "title": "Create Account - Relentless Health Website",
+          "fullFile": "cypress/e2e/authUser/RH_createAccount.cy.js",
+          "file": "cypress/e2e/authUser/RH_createAccount.cy.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Empty Fields - Page 2",
+              "fullTitle": "Create Account - Relentless Health Website Empty Fields - Page 2",
+              "timedOut": null,
+              "duration": 6612,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n    {\n        \"title\": \"Spec video recording\",\n        \"value\": \"videos/RH_createAccount.cy.js.mp4\"\n    }\n]",
+              "code": "const {\n  name,\n  lastName,\n  year,\n  month,\n  timestamp\n} = this.accountInformation.AccountCreation;\nconst {\n  expectedError1,\n  expectedError3,\n  expectedError4\n} = this.createAccountData.EmptyFields;\ncy.get('input[name=\"email\"]').type(dynamicAccount.dynEmail);\ncy.get('input[name=\"firstName\"]').type(name);\ncy.get('input[name=\"lastName\"]').type(lastName);\ncy.get('input[name=\"password\"]').type(dynamicAccount.dynPsw);\ncy.get('input[name=\"confirmPassword\"]').type(dynamicAccount.dynPsw);\ncy.get('input[name=\"tos_flag\"]').click().should('be.checked');\ncy.get('input[name=\"marketing_flag\"]').click().should('be.checked');\ncy.contains('button', 'Next').click();\ncy.get('input[name=\"phoneNumber\"]').clear();\n// cy.get('input[placeholder=\"DD/MM/YYYY\"]').type(birthday); \ncy.get('button[aria-label=\"Choose date\"]').click();\ncy.get('button[role=\"radio\"][aria-checked=\"false\"]').contains(year).click();\ncy.get(`button[aria-label=\"${month}\"]`).should('be.visible').click();\ncy.get(`button[data-timestamp=\"${timestamp}\"]`).should('be.visible').click();\ncy.get('input[placeholder=\"DD/MM/YYYY\"]').clear();\ncy.get('#mui-component-select-gender').click();\ncy.get('body').click(0, 0); //Close dropdown     \ncy.get('input[name=\"address_1\"]').clear();\ncy.get('input[name=\"city\"]').clear();\ncy.get('input[name=\"state\"]').dblclick();\ncy.get('#mui-component-select-occupation').click();\ncy.get('body').click(0, 0); //Close dropdown\ncy.get('input[name=\"zipcode\"]').clear();\ncy.get('input[name=\"address_2\"]').clear();\n//alert validations\ncy.get('.MuiFormHelperText-root.Mui-error').should('have.length', 8).each($el => {\n  cy.wrap($el).should($elem => {\n    const text = $elem.text().trim();\n    expect(text).to.be.oneOf([expectedError1, expectedError3, expectedError4]);\n  });\n});",
+              "err": {},
+              "uuid": "e89862e2-5f4b-41e8-bf30-4bb5ffae53aa",
+              "parentUUID": "6f1d147b-f6a5-4777-b6d9-a3cdda2e9bec",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e89862e2-5f4b-41e8-bf30-4bb5ffae53aa"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6612,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "reportFilename": "report",
+        "saveJson": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
