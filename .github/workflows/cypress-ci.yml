@@ -52,7 +52,3 @@ jobs:
         with:
           name: mochawesome-report
           path: cypress/relentlesshealthcypressautomation/cypress/reports
-          
-      - name: List reports directory (debug)
-        run: ls -R cypress/relentlesshealthcypressautomation/cypress/reports
-        working-directory: cypress/relentlesshealthcypressautomation
