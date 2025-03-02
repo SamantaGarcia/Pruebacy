@@ -117,8 +117,8 @@ module.exports = defineConfig({
     },
     // "viewportWidth": 1024, //defines the resolution of the execution
     // "viewportHeight": 768, //defines the resolution of the execution
-    "viewportWidth": 1377, //resolution for github actions
-    "viewportHeight": 1035, //resolution for github actions
+    "viewportWidth": 1000, //resolution for github actions
+    "viewportHeight": 660, //resolution for github actions
     "chromeWebSecurity": false, //Prevents cross-origin issues
     "video": true, 
     "screenshotOnRunFailure": true 
