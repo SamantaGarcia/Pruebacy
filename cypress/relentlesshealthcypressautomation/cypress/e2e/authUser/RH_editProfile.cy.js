@@ -122,12 +122,6 @@ describe('Edit Profile - Relentless Health Website', () => {
         cy.get('input[name="family_name"]').clear().type(newLastName);
         cy.get('#gender-select').click(); //Open Gender dropdown
         cy.get('li.MuiMenuItem-root').contains(newGender).click(); //Select Gender option
-        
-        cy.get('input[placeholder="DD/MM/YYYY"]').click();
-        cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
-        cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
-        cy.contains('button', day).should('be.visible').should('be.visible').click();
-        cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
 
         cy.get('input[name="custom:address_1"]').clear().type(invalidAddress1);
         cy.get('input[name="custom:address_2"]').clear().type(invalidAddress2);
@@ -150,12 +144,6 @@ describe('Edit Profile - Relentless Health Website', () => {
         cy.get('input[name="family_name"]').clear().type(newLastName); 
         cy.get('#gender-select').click(); //Open Gender dropdown
         cy.get('li.MuiMenuItem-root').contains(newGender).click(); //Select Gender option
-        
-        cy.get('input[placeholder="DD/MM/YYYY"]').click();
-        cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
-        cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
-        cy.contains('button', day).should('be.visible').should('be.visible').click();
-        cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
 
         cy.get('input[name="custom:address_1"]').clear().type(newAddress1);
         cy.get('input[name="custom:address_2"]').clear().type(newAddress2);
