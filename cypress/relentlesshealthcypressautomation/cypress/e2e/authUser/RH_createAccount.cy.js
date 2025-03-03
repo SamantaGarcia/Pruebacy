@@ -55,9 +55,13 @@ describe('Create Account - Relentless Health Website', () => {
         cy.get('input[placeholder="DD/MM/YYYY"]').click();
         cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
         cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
-        // cy.get(`button[data-timestamp="${timestamp}"]`).should('be.visible').click();
-        cy.contains('button', '3').should('be.visible').should('be.visible').click();
-        cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
+        cy.get(`button[data-timestamp="${timestamp}"]`).should('be.visible').click();
+
+        // cy.get('input[placeholder="DD/MM/YYYY"]').click();
+        // cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
+        // cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
+        // cy.contains('button', '3').should('be.visible').should('be.visible').click();
+        // cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
         
         // cy.get('input[placeholder="DD/MM/YYYY"]').clear(); 
         cy.get('#mui-component-select-gender').click(); 
