@@ -10,6 +10,7 @@ describe('Create Account - Relentless Health Website', () => {
         cy.readFile('cypress/fixtures/generatedData/dynamicEmail.json').then((data) => {
             dynamicAccount = data; 
           });
+          cy.get('[data-tid="banner-accept"]').click();
     });
 
     it('Cancel Account Creation', function() {
