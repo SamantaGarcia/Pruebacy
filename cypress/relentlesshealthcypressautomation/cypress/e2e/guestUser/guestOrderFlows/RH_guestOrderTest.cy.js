@@ -16,22 +16,16 @@ describe('Order test Guest User - Relentless Health Website', () => {
         cy.ShopifyLogin();
 
         cy.visit(`${EnvUrl}/order.html`);
+        cy.get('[data-tid="banner-accept"]').click();
         cy.contains('button', 'Next').click();
         cy.get('input[name="subjects[0].name"]').clear().type(`${newName} ${guestLastname}`); 
         cy.get('input[name="subjects[0].phoneNumber"]').clear().type(newPhone); 
 
-        cy.get('button[aria-label="Choose date"]').click();
-        cy.get('button[role="radio"][aria-checked="false"]') 
-        .contains(year) 
-        .click(); 
-
-        cy.get(`button[aria-label="${month}"]`) 
-        .should('be.visible') 
-        .click();
-
-        cy.get(`button[data-timestamp="${timestamp}"]`) 
-        .should('be.visible') 
-        .click();
+        cy.get('input[placeholder="DD/MM/YYYY"]').click();
+        cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
+        cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
+        cy.contains('button', timestamp).should('be.visible').should('be.visible').click();
+        cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
 
         cy.get('input.PrivateSwitchBase-input[name="subjects[0].isAnAdult"]').check();
         cy.contains('button', 'Go to shipping').click();  
