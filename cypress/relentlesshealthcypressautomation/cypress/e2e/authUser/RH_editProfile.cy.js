@@ -6,6 +6,7 @@ describe('Edit Profile - Relentless Health Website', () => {
         cy.fixture('editProfile').as('profileData');
         cy.fixture('accountInformation').as('accountInformation');
         cy.visit(`${EnvUrl}/profile.html`);
+        cy.get('[data-tid="banner-accept"]').click();
         cy.readFile('cypress/fixtures/generatedData/dynamicEmail.json').then((data) => {
             dynamicAccount = data; 
           });

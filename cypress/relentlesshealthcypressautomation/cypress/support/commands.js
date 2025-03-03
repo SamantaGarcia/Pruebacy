@@ -359,6 +359,7 @@ Cypress.Commands.add('placeAuthOrder', (EnvUrl, accountInformation, dynamicAccou
 
     cy.ShopifyLogin();
     cy.visit(`${EnvUrl}/order.html`);
+    cy.get('[data-tid="banner-accept"]').click();
     cy.contains('button', 'Next').click();
 
     cy.get('input[name="subjects[0].name"]').should('contain.value', newName);

@@ -4,8 +4,8 @@ describe('Login - Relentless Health Website', () => {
 
     beforeEach(() => {
         cy.visit(`${EnvUrl}/login`);
+        cy.get('[data-tid="banner-accept"]').click();
         cy.fixture('login').as('loginData');
-
         cy.readFile('cypress/fixtures/generatedData/dynamicEmail.json').then((data) => {
             dynamicAccount = data; 
           });

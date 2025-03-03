@@ -5,6 +5,7 @@ describe('Activate Kit - Relentless Health Website', () => {
     beforeEach(() => {
         cy.RelHealthLogin();
         cy.visit(`${EnvUrl}`);
+        cy.get('[data-tid="banner-accept"]').click();
         cy.fixture('activateKit').as('activateKit');
         cy.readFile('cypress/fixtures/generatedData/dynamicEmail.json').then((data) => {
             dynamicAccount = data; 
