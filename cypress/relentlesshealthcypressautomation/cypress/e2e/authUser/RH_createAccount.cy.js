@@ -36,7 +36,7 @@ describe('Create Account - Relentless Health Website', () => {
         cy.get('div.MuiBox-root.css-1q7ohal').should('be.visible').and('contain.text', expectedError2);
     });
 
-    it.only('Empty Fields - Page 2', function(){
+    it('Empty Fields - Page 2', function(){
         const { name, lastName, year, month, timestamp } = this.accountInformation.AccountCreation;
         const { expectedError1, expectedError3, expectedError4 } = this.createAccountData.EmptyFields;
 
@@ -51,11 +51,6 @@ describe('Create Account - Relentless Health Website', () => {
         cy.contains('button', 'Next').click();
 
         cy.get('input[name="phoneNumber"]').clear();
-        // // cy.get('input[placeholder="DD/MM/YYYY"]').type(birthday); 
-        // cy.get('input[placeholder="DD/MM/YYYY"]').click();
-        // cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
-        // cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
-        // cy.get(`button[data-timestamp="${timestamp}"]`).should('be.visible').click();
 
         cy.get('input[placeholder="DD/MM/YYYY"]').click();
         cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
@@ -101,7 +96,7 @@ describe('Create Account - Relentless Health Website', () => {
     });
 
     it('Invalid US Phone Number', function() {
-        const { name, lastName, birthday, gender, address1, address2, city, state, zipCode, education } = this.accountInformation.AccountCreation;
+        const { name, lastName, year, month, day, gender, address1, address2, city, state, zipCode, education } = this.accountInformation.AccountCreation;
         const { invalidPhone, expectedErrorPhone } = this.createAccountData.InvalidFields;
         
         cy.get('input[name="email"]').type(dynamicAccount.dynEmail); 
@@ -113,7 +108,11 @@ describe('Create Account - Relentless Health Website', () => {
         cy.contains('button', 'Next').click();
   
         cy.get('input[name="phoneNumber"]').type(invalidPhone); 
-        cy.get('input[placeholder="DD/MM/YYYY"]').type(birthday); 
+        cy.get('input[placeholder="DD/MM/YYYY"]').click();
+        cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
+        cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
+        cy.contains('button', day).should('be.visible').should('be.visible').click();
+        cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
         cy.get('#mui-component-select-gender').click(); 
         cy.get('li.MuiMenuItem-root').contains(gender).click(); 
         cy.get('input[name="address_1"]').type(address1); //Address 1
