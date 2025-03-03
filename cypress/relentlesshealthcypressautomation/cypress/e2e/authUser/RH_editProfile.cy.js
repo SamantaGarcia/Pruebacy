@@ -27,7 +27,7 @@ describe('Edit Profile - Relentless Health Website', () => {
     });
     
     it('Edit Profile Successfully', function() {
-        const { newName, newLastName, newPhone, year, month, day, newGender, newAddress1, newAddress2, newCity, newState, newZipCode, expectedResult } = this.accountInformation.EditInformation;
+        const { newName, newLastName, newPhone, year, month, day, newGender, newBirthday, newAddress1, newAddress2, newCity, newState, newZipCode, expectedResult } = this.accountInformation.EditInformation;
         cy.get('p[class*="MuiTypography-body1"]').contains('Edit').click();
 
         cy.get('input[name="name"]').clear().type(newName); 
