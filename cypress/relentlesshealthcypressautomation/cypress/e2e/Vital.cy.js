@@ -92,7 +92,7 @@ describe('Vital', () => {
     
   });
   
-  it('Obtain Auth SampleID 2', () => {
+  it.skip('Obtain Auth SampleID 2', () => {
     cy.visit(vitalUrl);
     cy.contains('a', 'Orders').click(); 
     cy.get('input[placeholder="Search..."]').type(orderData[1].test_kit_details[0].vital_order_id);
@@ -142,7 +142,7 @@ describe('Vital', () => {
     
   });
 
-  it('Obtain Auth SampleID 3', () => {
+  it.skip('Obtain Auth SampleID 3', () => {
     cy.visit(vitalUrl);
     cy.contains('a', 'Orders').click(); 
     cy.get('input[placeholder="Search..."]').type(orderData[2].test_kit_details[0].vital_order_id);

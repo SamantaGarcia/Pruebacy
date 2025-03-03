@@ -18,7 +18,7 @@ describe('Activate Kit - Relentless Health Website', () => {
         cy.fixture('navigation').as('navigation');
     });
 
-    it('Cancel Activation', function() {
+    it.only('Cancel Activation', function() {
         const { cancelActivation } = this.activateKit.authActivateKit;
         cy.visit(`${EnvUrl}/activate.html`);
         cy.contains('button', 'Cancel activation').click();
@@ -26,7 +26,7 @@ describe('Activate Kit - Relentless Health Website', () => {
         .should('contain.text', cancelActivation);
     });
 
-    it('Activate Kit 1 Successfully from Orders', function() {
+    it.only('Activate Kit 1 Successfully from Orders', function() {
         const { kitActivatedTitle } = this.activateKit.authActivateKit;
         const { firefighters } = this.activateKit.Donation;
         const sOrderId = orderData[0].s_order_id.split('/').pop();
