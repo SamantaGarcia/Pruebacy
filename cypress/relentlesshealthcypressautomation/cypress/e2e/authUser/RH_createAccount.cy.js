@@ -36,7 +36,7 @@ describe('Create Account - Relentless Health Website', () => {
         cy.get('div.MuiBox-root.css-1q7ohal').should('be.visible').and('contain.text', expectedError2);
     });
 
-    it.only('Empty Fields - Page 2', function(){
+    it('Empty Fields - Page 2', function(){
         const { name, lastName, year, month, timestamp } = this.accountInformation.AccountCreation;
         const { expectedError1, expectedError3, expectedError4 } = this.createAccountData.EmptyFields;
 
