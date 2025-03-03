@@ -21,7 +21,7 @@ describe('Order test Logged User - Relentless Health Website', () => {
         });
     }
 
-    it.only('Order First Test Successfully', function() {
+    it('Order First Test Successfully', function() {
         cy.placeAuthOrder(EnvUrl, this.accountInformation, dynamicAccount).then((orderResponse) => {
             saveOrderResponse(orderResponse);
             cy.visit(`${EnvUrl}/order.html`);

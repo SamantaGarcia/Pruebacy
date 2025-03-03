@@ -10,7 +10,7 @@
         "emptyBirthdateAlert": "Date of birth is required",
         "invalidName": "NoLastname",
         "invalidNameAlert": "Please enter both first and last name",
-        "invalidBirthdate": "12/12/2020",
+        "invalidBirthdate": "2024",
         "invalidBirthdateAlert": "You must be at least 18 years old"
     },
     "Page3":{
