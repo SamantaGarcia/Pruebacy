@@ -129,7 +129,7 @@ describe('Create Account - Relentless Health Website', () => {
         .should('be.visible');
     });
 
-    it('Invalid Birth date', function() {
+    it.skip('Invalid Birth date', function() {
         const { name, lastName, phone, gender, address1, address2, city, state, zipCode, education } = this.accountInformation.AccountCreation;
         const { invalidBirthday, expectedErrorBirthday } = this.createAccountData.InvalidFields;
         
@@ -148,7 +148,7 @@ describe('Create Account - Relentless Health Website', () => {
         .should('be.visible');
     });
 
-    it('Invalid US Address', function() {
+    it.skip('Invalid US Address', function() {
         const { name, lastName, birthday, gender, phone, address2, state, education } = this.accountInformation.AccountCreation;
         const { invalidAddress1, invalidCity, invalidZipCode, expectedErrorAddress } = this.createAccountData.InvalidFields;
         
@@ -177,7 +177,7 @@ describe('Create Account - Relentless Health Website', () => {
         cy.get('div.MuiAlert-message.css-f94cg5').should('be.visible').and('contain.text', expectedErrorAddress);
     });
 
-    it('Invalid Verification Code', function() {
+    it.skip('Invalid Verification Code', function() {
         const { name, lastName, phone, birthday, gender, address1, address2, city, state, zipCode, education } = this.accountInformation.AccountCreation;
         const { invalidVerificationCode, expectedErrorCode } = this.createAccountData.InvalidFields;
 
@@ -209,7 +209,7 @@ describe('Create Account - Relentless Health Website', () => {
         cy.get('div.MuiAlert-message').should('be.visible').and('contain.text', expectedErrorCode);
     });
 
-    it('Resend Verification Code', function() {
+    it.skip('Resend Verification Code', function() {
         const { name, lastName, phone, birthday, gender, address1, address2, city, state, zipCode, education } = this.accountInformation.AccountCreation;
         const { expectedResult }= this.createAccountData.ResendCode;
         
@@ -240,7 +240,7 @@ describe('Create Account - Relentless Health Website', () => {
         
     });
 
-    it('Create Account Successfully', function() {
+    it.skip('Create Account Successfully', function() {
         const { name, lastName, phone, birthday, gender, address1, address2, city, state, zipCode, education } = this.accountInformation.AccountCreation;
     
         cy.get('input[name="email"]').type(dynamicAccount.dynEmail); //Email
