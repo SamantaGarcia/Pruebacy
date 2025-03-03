@@ -3,6 +3,7 @@ describe('Order a Test - Who is this test for?', () => {
     beforeEach(() => {
         cy.RelHealthLogin();
         cy.visit(`${EnvUrl}/order.html`);
+        cy.get('[data-tid="banner-accept"]').click();
         cy.fixture('orderTestSadPaths').as('orderTestPage2');
         cy.fixture('accountInformation').as('accountInformation');
     });
