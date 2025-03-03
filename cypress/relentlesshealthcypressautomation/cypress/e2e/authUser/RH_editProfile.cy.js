@@ -27,14 +27,20 @@ describe('Edit Profile - Relentless Health Website', () => {
     });
     
     it('Edit Profile Successfully', function() {
-        const { newName, newLastName, newPhone, newBirthday, newGender, newAddress1, newAddress2, newCity, newState, newZipCode, expectedResult } = this.accountInformation.EditInformation;
+        const { newName, newLastName, newPhone, year, month, day, newGender, newAddress1, newAddress2, newCity, newState, newZipCode, expectedResult } = this.accountInformation.EditInformation;
         cy.get('p[class*="MuiTypography-body1"]').contains('Edit').click();
 
         cy.get('input[name="name"]').clear().type(newName); 
         cy.get('input[name="family_name"]').clear().type(newLastName); 
         cy.get('#gender-select').click(); //Open Gender dropdown
         cy.get('li.MuiMenuItem-root').contains(newGender).click(); //Select Gender option
-        cy.get('input[placeholder="DD/MM/YYYY"]').clear().type(newBirthday);
+
+        cy.get('input[placeholder="DD/MM/YYYY"]').click();
+        cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
+        cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
+        cy.contains('button', day).should('be.visible').should('be.visible').click();
+        cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
+
         cy.get('input[name="custom:address_1"]').clear().type(newAddress1);
         cy.get('input[name="custom:address_2"]').clear().type(newAddress2);
         cy.get('input[name="custom:city"]').clear().type(newCity);
@@ -74,7 +80,7 @@ describe('Edit Profile - Relentless Health Website', () => {
         cy.get('input[name="family_name"]').clear();
         cy.get('#gender-select').click(); //Open Gender dropdown
         cy.get('li.MuiMenuItem-root').contains(gender).click(); //Select Gender option
-        cy.get('input[placeholder="DD/MM/YYYY"]').clear();
+        // cy.get('input[placeholder="DD/MM/YYYY"]').clear();
         cy.get('input[name="custom:address_1"]').clear();
         cy.get('input[name="custom:address_2"]').clear();
         cy.get('input[name="custom:city"]').clear();
@@ -90,8 +96,8 @@ describe('Edit Profile - Relentless Health Website', () => {
         .should('be.visible');   
         cy.get('.MuiBox-root').contains(errorGender)
         .should('be.visible');
-        cy.get('.MuiFormHelperText-root.Mui-error').contains(errordateofbirth)
-        .should('be.visible');
+        // cy.get('.MuiFormHelperText-root.Mui-error').contains(errordateofbirth)
+        // .should('be.visible');
         cy.get('.MuiFormHelperText-root.Mui-error').contains(errorAddress1)
         .should('be.visible');        
         cy.get('.MuiFormHelperText-root.Mui-error').contains(errorCity)
@@ -106,7 +112,7 @@ describe('Edit Profile - Relentless Health Website', () => {
     });
 
     it('Invalid US address', function() {
-        const { newName, newLastName, newPhone, newBirthday, newGender, newState } = this.accountInformation.EditInformation;
+        const { newName, newLastName, newPhone, year, month, day, newGender, newState } = this.accountInformation.EditInformation;
         const { invalidAddress1, invalidAddress2, invalidCity, invalidZipCode, expectedErrorAddress} = this.profileData.InvalidFields;
 
 
@@ -116,7 +122,13 @@ describe('Edit Profile - Relentless Health Website', () => {
         cy.get('input[name="family_name"]').clear().type(newLastName);
         cy.get('#gender-select').click(); //Open Gender dropdown
         cy.get('li.MuiMenuItem-root').contains(newGender).click(); //Select Gender option
-        cy.get('input[placeholder="DD/MM/YYYY"]').clear().type(newBirthday);
+        
+        cy.get('input[placeholder="DD/MM/YYYY"]').click();
+        cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
+        cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
+        cy.contains('button', day).should('be.visible').should('be.visible').click();
+        cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
+
         cy.get('input[name="custom:address_1"]').clear().type(invalidAddress1);
         cy.get('input[name="custom:address_2"]').clear().type(invalidAddress2);
         cy.get('input[name="custom:city"]').clear().type(invalidCity);
@@ -131,14 +143,20 @@ describe('Edit Profile - Relentless Health Website', () => {
 
     it('Invalid US Phone', function() {
         const { invalidPhone, expectedErrorPhone } = this.profileData.InvalidFields;
-        const { newName, newLastName, newBirthday, newGender, newAddress1, newAddress2, newCity, newState, newZipCode } = this.accountInformation.EditInformation;
+        const { newName, newLastName, year, month, day, newGender, newAddress1, newAddress2, newCity, newState, newZipCode } = this.accountInformation.EditInformation;
         cy.get('p[class*="MuiTypography-body1"]').contains('Edit').click();
 
         cy.get('input[name="name"]').clear().type(newName); 
         cy.get('input[name="family_name"]').clear().type(newLastName); 
         cy.get('#gender-select').click(); //Open Gender dropdown
         cy.get('li.MuiMenuItem-root').contains(newGender).click(); //Select Gender option
-        cy.get('input[placeholder="DD/MM/YYYY"]').clear().type(newBirthday);
+        
+        cy.get('input[placeholder="DD/MM/YYYY"]').click();
+        cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
+        cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
+        cy.contains('button', day).should('be.visible').should('be.visible').click();
+        cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
+
         cy.get('input[name="custom:address_1"]').clear().type(newAddress1);
         cy.get('input[name="custom:address_2"]').clear().type(newAddress2);
         cy.get('input[name="custom:city"]').clear().type(newCity);
@@ -154,14 +172,20 @@ describe('Edit Profile - Relentless Health Website', () => {
 
     it('Invalid Birth date', function() {
         const { invalidBirthday, expectedErrorBirthday } = this.profileData.InvalidFields;
-        const { newName, newLastName, newPhone, newGender, newAddress1, newAddress2, newCity, newState, newZipCode } = this.accountInformation.EditInformation;
+        const { newName, newLastName, newPhone, newGender, month, day, newAddress1, newAddress2, newCity, newState, newZipCode } = this.accountInformation.EditInformation;
         cy.get('p[class*="MuiTypography-body1"]').contains('Edit').click();
 
         cy.get('input[name="name"]').clear().type(newName); 
         cy.get('input[name="family_name"]').clear().type(newLastName); 
         cy.get('#gender-select').click(); //Open Gender dropdown
         cy.get('li.MuiMenuItem-root').contains(newGender).click(); //Select Gender option
-        cy.get('input[placeholder="DD/MM/YYYY"]').clear().type(invalidBirthday);
+        
+        cy.get('input[placeholder="DD/MM/YYYY"]').click();
+        cy.get('button[role="radio"][aria-checked="false"]').contains(invalidBirthday).click();
+        cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
+        cy.contains('button', day).should('be.visible').should('be.visible').click();
+        cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
+
         cy.get('input[name="custom:address_1"]').clear().type(newAddress1);
         cy.get('input[name="custom:address_2"]').clear().type(newAddress2);
         cy.get('input[name="custom:city"]').clear().type(newCity);

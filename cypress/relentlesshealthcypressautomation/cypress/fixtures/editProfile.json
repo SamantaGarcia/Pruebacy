@@ -17,7 +17,7 @@
         "invalidAddress2": "invalid address2",
         "invalidCity": "invalir city",
         "invalidZipCode": "12345",
-        "invalidBirthday": "10/11/2023",
+        "invalidBirthday": "2024",
         "expectedErrorAddress": "Invalid Address. Please provide the correct address",
         "expectedErrorPhone": "Enter a valid US Phone number",
         "expectedErrorBirthday": "You must be at least 18 years old"
