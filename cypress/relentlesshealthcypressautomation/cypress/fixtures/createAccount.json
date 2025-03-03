@@ -14,7 +14,7 @@
         "invalidCity": "invalir city",
         "invalidZipCode": "12345",
         "invalidVerificationCode": "12345",
-        "invalidBirthday": "12/21/2024",
+        "invalidBirthday": "2024",
         "expectedErrorPhone": "Enter a valid US Phone number",
         "expectedErrorAddress": "Invalid Address. Please provide the correct address",
         "expectedErrorCode": "Invalid confirmation code. Please try again.",

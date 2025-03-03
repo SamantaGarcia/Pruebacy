@@ -129,8 +129,8 @@ describe('Create Account - Relentless Health Website', () => {
         .should('be.visible');
     });
 
-    it.skip('Invalid Birth date', function() {
-        const { name, lastName, phone, gender, address1, address2, city, state, zipCode, education } = this.accountInformation.AccountCreation;
+    it('Invalid Birth date', function() {
+        const { name, lastName, day, month } = this.accountInformation.AccountCreation;
         const { invalidBirthday, expectedErrorBirthday } = this.createAccountData.InvalidFields;
         
         cy.get('input[name="email"]').type(dynamicAccount.dynEmail); 
@@ -142,7 +142,11 @@ describe('Create Account - Relentless Health Website', () => {
         cy.contains('button', 'Next').click();
   
          
-        cy.get('input[placeholder="DD/MM/YYYY"]').type(invalidBirthday);
+        cy.get('input[placeholder="DD/MM/YYYY"]').click();
+        cy.get('button[role="radio"][aria-checked="false"]').contains(invalidBirthday).click();
+        cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
+        cy.contains('button', day).should('be.visible').should('be.visible').click();
+        cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
 
         cy.get('.MuiFormHelperText-root.Mui-error').contains(expectedErrorBirthday)
         .should('be.visible');
