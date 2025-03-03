@@ -21,7 +21,7 @@ describe('Vital', () => {
         password: Cypress.env('GOOGLE_PASSWORD'),
         loginUrl: Cypress.env('CYPRESS_VITAL_DEV_ENV'),
         cookieName: Cypress.env('GOOGLE_COOKIE'),
-        headless: true,
+        headless: false,
         logs: true,
         args: ['--no-sandbox', '--disable-dev-shm-usage'], //Ci/Cd
         loginSelector: 'button[data-provider="google"]',
