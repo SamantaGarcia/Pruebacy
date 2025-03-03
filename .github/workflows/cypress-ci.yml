@@ -29,7 +29,7 @@ jobs:
         working-directory: cypress/relentlesshealthcypressautomation
 
       - name: Run Cypress tests with Mochawesome reporter
-        run: npx cypress run --spec "cypress/e2e/authUser/RH_createAccount.cy.js" --browser chrome --headless
+        run: npx cypress run --browser chrome --headless
         working-directory: cypress/relentlesshealthcypressautomation
 
       - name: Upload Cypress Videos

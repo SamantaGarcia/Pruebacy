@@ -265,8 +265,8 @@ describe('Create Account - Relentless Health Website', () => {
         
     });
 
-    it.skip('Create Account Successfully', function() {
-        const { name, lastName, phone, birthday, gender, address1, address2, city, state, zipCode, education } = this.accountInformation.AccountCreation;
+    it('Create Account Successfully', function() {
+        const { name, lastName, phone, year, month, day, gender, address1, address2, city, state, zipCode, education } = this.accountInformation.AccountCreation;
     
         cy.get('input[name="email"]').type(dynamicAccount.dynEmail); //Email
         cy.get('input[name="firstName"]').type(name); //Name
@@ -278,7 +278,13 @@ describe('Create Account - Relentless Health Website', () => {
         cy.contains('button', 'Next').click();
   
         cy.get('input[name="phoneNumber"]').type(phone); //Phone number. Must be a real US phone
-        cy.get('input[placeholder="DD/MM/YYYY"]').type(birthday); 
+        
+        cy.get('input[placeholder="DD/MM/YYYY"]').click();
+        cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
+        cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
+        cy.contains('button', day).should('be.visible').should('be.visible').click();
+        cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
+
         cy.get('#mui-component-select-gender').click(); //Open Gender dropdown
         cy.get('li.MuiMenuItem-root').contains(gender).click(); //Select Gender option
         cy.get('input[name="address_1"]').type(address1); //Address 1
