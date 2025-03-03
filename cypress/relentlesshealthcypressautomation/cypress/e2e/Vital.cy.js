@@ -23,6 +23,7 @@ describe('Vital', () => {
         cookieName: Cypress.env('GOOGLE_COOKIE'),
         headless: true,
         logs: true,
+        args: ['--no-sandbox', '--disable-dev-shm-usage'], //Ci/Cd
         loginSelector: 'button[data-provider="google"]',
         postLoginSelector: 'div.json-formatter-container',
       };
