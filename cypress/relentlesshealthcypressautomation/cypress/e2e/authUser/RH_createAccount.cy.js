@@ -173,7 +173,7 @@ describe('Create Account - Relentless Health Website', () => {
         cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
         cy.contains('button', day).should('be.visible').should('be.visible').click();
         cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
-        
+
         cy.get('#mui-component-select-gender').click(); 
         cy.get('li.MuiMenuItem-root').contains(gender).click(); 
         cy.get('input[name="address_1"]').type(invalidAddress1); //Address 1
@@ -189,8 +189,8 @@ describe('Create Account - Relentless Health Website', () => {
         cy.get('div.MuiAlert-message.css-f94cg5').should('be.visible').and('contain.text', expectedErrorAddress);
     });
 
-    it.skip('Invalid Verification Code', function() {
-        const { name, lastName, phone, birthday, gender, address1, address2, city, state, zipCode, education } = this.accountInformation.AccountCreation;
+    it('Invalid Verification Code', function() {
+        const { name, lastName, phone, year, month, day, gender, address1, address2, city, state, zipCode, education } = this.accountInformation.AccountCreation;
         const { invalidVerificationCode, expectedErrorCode } = this.createAccountData.InvalidFields;
 
         cy.get('input[name="email"]').type(dynamicAccount.dynEmail); 
@@ -202,7 +202,13 @@ describe('Create Account - Relentless Health Website', () => {
         cy.contains('button', 'Next').click();
   
         cy.get('input[name="phoneNumber"]').type(phone); 
-        cy.get('input[placeholder="DD/MM/YYYY"]').type(birthday); 
+        
+        cy.get('input[placeholder="DD/MM/YYYY"]').click();
+        cy.get('button[role="radio"][aria-checked="false"]').contains(year).click();
+        cy.get(`button[aria-label="${month}"]`).should('be.visible').click();
+        cy.contains('button', day).should('be.visible').should('be.visible').click();
+        cy.contains('button', 'OK').should('be.visible').should('be.visible').click();
+
         cy.get('#mui-component-select-gender').click(); //Open Gender dropdown
         cy.get('li.MuiMenuItem-root').contains(gender).click(); //Select Gender option
         cy.get('input[name="address_1"]').type(address1); //Address 1
